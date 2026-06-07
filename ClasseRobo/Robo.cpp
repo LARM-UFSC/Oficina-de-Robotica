@@ -54,6 +54,25 @@ float Robo::lerDistancia()
     return calcularDistancia();
 }
 
+uint8_t lerInfravermelhoEsquerda()
+{
+    #if INFRAVERMELHO == DIGITAL
+    return digitalRead(INFRAVERMELHO_E);
+    #elif INFRAVERMELHO == ANALOGICO
+    return analogRead(INFRAVERMELHO_E);
+    #endif
+}
+
+uint8_t lerInfravermelhoDireita()
+{
+    #if INFRAVERMELHO == DIGITAL
+    return digitalRead(INFRAVERMELHO_D);
+    #elif INFRAVERMELHO == ANALOGICO
+    return analogRead(INFRAVERMELHO_D);
+    #endif
+}
+
+
 uint8_t Robo::getRoboID()
 {
     return roboId;

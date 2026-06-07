@@ -12,7 +12,6 @@ class Robo {
         velocidade_t vel_atual_motor_d;
         velocidade_t vel_atual_motor_e;
 
-
         float calcularDistancia();
         void configurarRobo();
         void mostrarMSG(char *msg);
@@ -20,6 +19,8 @@ class Robo {
     public:
         Robo(uint8_t id);
         float lerDistancia();
+        uint8_t lerInfravermelhoEsquerda();
+        uint8_t lerInfravermelhoDireita();
         uint8_t getRoboID();
         void roboSetup();
         void irParaFrente(velocidade_t velocidade);
